@@ -20,7 +20,7 @@ var login={
 			// 以post方式提交数据data到url，结果返回到result
 			// 执行异步请求
 			$.post(url,data,function(result){
-                dumpObj(result);
+                //dumpObj(result);
 				if(result.status == 0){
 					return dialog.error(result.message);
 				}else if(result.status == 	1){

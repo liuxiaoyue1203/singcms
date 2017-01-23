@@ -85,11 +85,7 @@ function todelete(url, data){
 
 //排序操作
 $('#button-listorder').click(function(){
-	//dialog.success('点击排序');
-    //获取listorder内容   serializeArray返回的JSON对象由对象数组组成，格式：
-	//[   {name: 'listorder[{$menu.menu_id}]', value: '{$menu.listorder}'}, 
-	//	  {name: 'listorder[{$menu.menu_id}]', value: '{$menu.listorder}'},
-	//	  {name: 'listorder[{$menu.menu_id}]'}, // 值为空                           ]
+	//dialog.success('点击排序'); 	]
 	var data=$('#singcms-listorder').serializeArray();
 	postData={};
 	//each 以每一个匹配的元素作为上下文来执行一个函数
