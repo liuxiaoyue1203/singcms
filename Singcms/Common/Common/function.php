@@ -10,7 +10,7 @@ function show($status,$message,$data=array()){
           'message' => $message,
           'data' => $data,  
       );
-      exit(json_encode($result));
+      exit(json_encode($result)); // ==> echo json_encode($result); return ;
 }
 
 // 对(密码+'MD5_PRE')进行md5加密
