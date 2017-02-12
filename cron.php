@@ -42,5 +42,8 @@ require $dir.'/ThinkPHP/ThinkPHP.php';
 /* 系统crontab设置
     crontab -e
     m h  dom mon dow   command
+    每分钟
     ×/1 × × × × php /home/ubuntu/web/singcms/cron.php home index crontab_build_html > /dev/null
+    每天凌晨1点
+    × 1 × × × php /home/ubuntu/web/singcms/cron.php admin cron dumpmysql > /dev/null
 */

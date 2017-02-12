@@ -8,8 +8,6 @@ use Think\Upload;
  * 后台计划任务 业务脚本
  */
 class CronController {
-
-
     public function dumpmysql() {
         $result = D("Basic")->select();
         if(!$result['dumpmysql']) {
@@ -17,7 +15,6 @@ class CronController {
         }
         $shell = "mysqldump -u".C("DB_USER")." " ."-p".C(DB_PWD)." ".C("DB_NAME")." > /tmp/cms".date("Ymd").".sql";
         exec($shell);
-
         return show(1, '备份数据库成功');
     }
 }

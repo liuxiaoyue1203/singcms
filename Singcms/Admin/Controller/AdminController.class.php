@@ -19,7 +19,6 @@ class AdminController extends CommonController {
 
         // 保存数据
         if(IS_POST) {
-
             if(!isset($_POST['username']) || !$_POST['username']) {
                 return show(0, '用户名不能为空');
             }
@@ -32,7 +31,6 @@ class AdminController extends CommonController {
             if($admin && $admin['status']!=-1) {
                 return show(0,'该用户存在');
             }
-
             // 新增
             $id = D("Admin")->insert($_POST);
             if(!$id) {
