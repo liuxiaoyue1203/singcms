@@ -24,6 +24,7 @@ class ImageController extends CommonController
     {
         $upload = D('UploadImage');
         $res = $upload->imageUpload();
+        //print_r($res);exit;
         if ($res === false) {
             return show(0, '上传失败', '');
         } else {

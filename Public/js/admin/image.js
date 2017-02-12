@@ -3,8 +3,8 @@
  */
 $(function() {
     $('#file_upload').uploadify({
-        'swf'      : SCOPE.ajax_upload_swf,
-        'uploader' : SCOPE.ajax_upload_image_url,
+        'swf'      : SCOPE.ajax_upload_swf,       //插件的位置
+        'uploader' : SCOPE.ajax_upload_image_url, // 上传处理的跳转url
         'buttonText': '上传图片',
         'fileTypeDesc': 'Image Files',
         'fileObjName' : 'file',
