@@ -6,13 +6,13 @@
         <div class="banner">
           <div class="banner-left">
             <div class="banner-info"><span>阅读数</span><i class="news_count node-{$result['topPicNews'][0]['news_id']}" news-id="{$result['topPicNews'][0]['news_id']}" id="node-{$result['topPicNews'][0]['news_id']}"></i></div>
-            <a target="_blank" href="/index.php?c=detail&id={$result['topPicNews'][0]['news_id']}"><img width="670" height="360" src="{$result['topPicNews'][0]['thumb']}" alt=""></a>
+            <a target="_blank" href="/index.php?c=detail&id={$result['topPicNews'][0]['news_id']}"><img width="670" height="360" src="{$result['topPicNews'][0]['thumb']}" alt="" title ="{$result['topPicNews'][0]['title']}"></a>
           </div>
           <div class="banner-right">
             <ul>
               <volist name="result['topSmailNews']" id="vo">
               <li>
-                <a target="_blank" href="/index.php?c=detail&id={$vo.news_id}"><img width="150" height="113" src="{$vo.thumb}" alt="{$vo.title}"></a>
+                <a target="_blank" href="/index.php?c=detail&id={$vo.news_id}"><img width="150" height="113" src="{$vo.thumb}" alt="{$vo.title}" title ="{$vo.title}"></a>
               </li>
               </volist>
 

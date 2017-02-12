@@ -12,7 +12,7 @@ class CommonController extends Controller {
      */
     public function getRank() {
         $conds['status'] = 1;
-        $news = D("News")->getRank($conds,5);
+        $news = D("News")->getRank($conds,10);
         return $news;
     }
 

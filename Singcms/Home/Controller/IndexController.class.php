@@ -3,7 +3,7 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends CommonController {
     public function index($type=''){
-        //获取排行
+        //右侧排行
         $rankNews=$this->getRank();
         //首页大图数据
         $topPicNews=D("PositionContent")->select(array('status'=>1,'position_id'=>2),1);
@@ -12,7 +12,8 @@ class IndexController extends CommonController {
 
         $listNews = D("News")->select(array('status'=>1,'thumb'=>array('neq','')),30);
 
-        $advNews=D("PositionContent")->select(array('status'=>1,'position_id'=>5),2);
+        //右侧广告位
+        $advNews=D("PositionContent")->select(array('status'=>1,'position_id'=>5),3);
 
         $this->assign('result',array(
             'topPicNews'=>$topPicNews,
