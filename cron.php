@@ -32,9 +32,15 @@ $_GET['a'] = !isset($_GET['a']) ? $argv[3] : 'index';
 //print_r($_GET);exit;
 
 // 定义应用目录
-define('APP_PATH',$dir.'/Application/');
+define('APP_PATH',$dir.'/Singcms/');
 
 // 引入ThinkPHP入口文件
 require $dir.'/ThinkPHP/ThinkPHP.php';
 
 // 亲^_^ 后面不需要任何代码了 就是如此简单
+
+/* 系统crontab设置
+    crontab -e
+    m h  dom mon dow   command
+    ×/1 × × × × php /home/ubuntu/web/singcms/cron.php home index crontab_build_html > /dev/null
+*/

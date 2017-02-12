@@ -1,9 +1,11 @@
 /**
  * 计数器JS文件
+ * 用在静态化首页 index.html
  */
 
 var newsIds = {};
 $(".news_count").each(function(i){
+    //获取显示的所有文章的id
     newsIds[i] = $(this).attr("news-id");
 });
 

@@ -11,7 +11,7 @@ class BasicController extends CommonController {
 	public function index() {
 		$result = D("Basic")->select();
 		$this->assign('vo', $result);
-		$this->assign('type',1);
+		$this->assign('type',1); // type对应在button.html
 		$this->display();
 	}
 

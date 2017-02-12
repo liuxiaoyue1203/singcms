@@ -31,7 +31,7 @@ class DetailController extends CommonController {
             'news' => $news,
         ));
 
-        $this->display("Detail/index");
+        $this->display("Detail/index"); //防止view方法加载view.html
     }
 
     public function  view() {
